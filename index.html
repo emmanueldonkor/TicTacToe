@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <smeta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div style="display: flex; justify-content: center;gap:20px">
+    <button class="button-86" role="button" onclick="selectAI('X');" id="selectx" disabled>Play AI(X)</button>
+    <button class="button-86" role="button" onclick="selectAI('O');" id="selecto">Play AI(O)</button>
+    <button class="button-86" role="button" onclick="selectAI('human');" id="selecthuman">Play Human</button>
+  </div>
+  <div style="display: flex; align-items: center; text-align: center; width: 100%; height: 100vh;">
+    <div>
+      <table>
+        <tr class="b_bottom">
+          <td class="b_right tc" id="a1" onclick="play(this.id);"></td>
+          <td class="b_right tc" id="a2" onclick="play(this.id);"></td>
+          <td class="tc" id="a3" onclick="play(this.id);"></td>
+        </tr>
+        <tr class="b_bottom">
+          <td class="b_right tc" id="b1" onclick="play(this.id);"></td>
+          <td class="b_right tc" id="b2" onclick="play(this.id);"></td>
+          <td class="tc" id="b3" onclick="play(this.id);"></td>
+        </tr>
+        <tr>
+          <td class="b_right tc" id="c1" onclick="play(this.id);"></td>
+          <td class="b_right tc" id="c2" onclick="play(this.id);"></td>
+          <td class="tc" id="c3" onclick="play(this.id);"></td>
+        </tr>
+      </table><br><br>
+
+      <div><span id="winner" style="font-size: 4rem;" hidden></span> <span id="wins" style="font-size: 3rem;"
+          hidden>&nbsp;wins</span> <span id="draws" style="font-size: 3rem;" hidden>&nbsp;Draw</span></div>
+      <div><button class="button-86" role="button"
+          style=" margin:auto;"
+          onclick="refreshDOM();">REFRESH</button></div>
+
+    </div>
+  </div>
+</body>
+<script src="./main.js" defer></script>
+</html>
